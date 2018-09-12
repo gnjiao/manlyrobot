@@ -1,0 +1,60 @@
+<RCC>
+    <qresource prefix="/light">
+        <file>res/light1.png</file>
+        <file>res/light2.png</file>
+        <file>res/operatebtn2.png</file>
+    </qresource>
+    <qresource prefix="/logo">
+        <file>res/logo.png</file>
+    </qresource>
+    <qresource prefix="/button">
+        <file>res/editbtn1.png</file>
+        <file>res/editbtn2.png</file>
+        <file>res/exitbtn1.png</file>
+        <file>res/exitbtn2.png</file>
+        <file>res/logout1.png</file>
+        <file>res/logout2.png</file>
+        <file>res/movetoolbtn1.png</file>
+        <file>res/movetoolbtn2.png</file>
+        <file>res/operatebtn1.png</file>
+        <file>res/poweroffbtn1.png</file>
+        <file>res/poweroffbtn2.png</file>
+        <file>res/reset1.png</file>
+        <file>res/reset2.png</file>
+        <file>res/start1.png</file>
+        <file>res/start2.png</file>
+        <file>res/stop1.png</file>
+        <file>res/stop2.png</file>
+        <file>res/switchbtn1.png</file>
+        <file>res/switchbtn2.png</file>
+        <file>res/userbtn1.png</file>
+        <file>res/userbtn2.png</file>
+        <file>res/operatebtn2.png</file>
+    </qresource>
+    <qresource prefix="/picture">
+        <file>res/bp1.png</file>
+        <file>res/bp2.png</file>
+        <file>res/dot1.png</file>
+        <file>res/dot2.png</file>
+        <file>res/num0_1.png</file>
+        <file>res/num0_2.png</file>
+        <file>res/num1_1.png</file>
+        <file>res/num1_2.png</file>
+        <file>res/num2_1.png</file>
+        <file>res/num2_2.png</file>
+        <file>res/num3_1.png</file>
+        <file>res/num3_2.png</file>
+        <file>res/num4_1.png</file>
+        <file>res/num4_2.png</file>
+        <file>res/num5_1.png</file>
+        <file>res/num5_2.png</file>
+        <file>res/num6_1.png</file>
+        <file>res/num6_2.png</file>
+        <file>res/num7_1.png</file>
+        <file>res/num7_2.png</file>
+        <file>res/num8_1.png</file>
+        <file>res/num8_2.png</file>
+        <file>res/num9_1.png</file>
+        <file>res/num9_2.png</file>
+    </qresource>
+</RCC>

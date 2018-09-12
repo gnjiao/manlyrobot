@@ -1,0 +1,49 @@
+webview 进行必要的设置
+ui->webView->settings()->setAttribute(QWebSettings::PluginsEnabled,true);
+ui->webView->settings()->setAttribute(QWebSettings::JavascriptEnabled,true);
+ui->webView->page()->setPluginFactory(newIntelliPlugin);
+
+（4） 当一个load一个页面 ，希望通过点击这个页面的2级连接来做其他事情：，其中需要在 load之后
+ui->webView->load(QUrl("http://www.baidu.com"));
+ui->webView->page()->setLinkDelegationPolicy(QWebPage::DelegateAllLinks);
+
+需要给webveiw 的siganal    （linkClicked）  加个槽函数
+voidMainWindow::on_webView_linkClicked(constQUrl&arg1)
+{
+ui->webView->load(QUrl("http://www.qq.com"));
+QMessageBoxhimessagebox;
+himessagebox.setText("hitodayisaniceday");
+himessagebox.exec();
+}// 这样就行了
+打开本地 html 文件
+QStringfilename=QFileDialog::getOpenFileName(this,tr("打开文件..."),QString(),tr("网页文件(*.htm*.mht*.html);;AllFiles(*.*)"));
+
+if(!filename.isEmpty())
+{
+ui->webView->settings()->setAttribute(QWebSettings::PluginsEnabled,true);
+ui->webView->settings()->setAttribute(QWebSettings::JavascriptEnabled,true);
+ui->webView->page()->setPluginFactory(newIntelliPlugin);
+ui->webView->load(QUrl::fromUserInput(filename));
+
+QStringcurFile=QFileInfo(filename).canonicalFilePath();//获得文件的标准路径
+this->setWindowTitle(curFile+"-WebView");
+
+//this->statusLabel->setText("");
+
+}
+隐藏qwebview 的滑动条
+
+ui.webView->page()->mainFrame()->setScrollBarPolicy(Qt::Horizontal,Qt::ScrollBarAlwaysOff);
+	ui.webView->page()->mainFrame()->setScrollBarPolicy(Qt::Vertical,Qt::ScrollBarAlwaysOff);
+	ui.webView_2->page()->mainFrame()->setScrollBarPolicy(Qt::Horizontal,Qt::ScrollBarAlwaysOff);
+	ui.webView_2->page()->mainFrame()->setScrollBarPolicy(Qt::Vertical,Qt::ScrollBarAlwaysOff);
+qt 启动其他默认浏览器打开一个网页
+Qt.openUrlExternally("http://yoururl")
+Qt.openUrlExternally("tel:<number>")
+
+QDesktopServices::openUrl(arg1);
+qt 调用html页面的javascript
+ui.webView->page()->mainFrame()->evaluateJavaScript("helloworld()"); //helloworld是html 里面的自定义javascript 方法
+
+任何获得焦点的控件 不论是qt自己的控件还是html页面里德控件都会 获得剪切板里面的文字
+
